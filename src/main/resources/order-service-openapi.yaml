@@ -31,7 +31,7 @@ paths:
                 value:
                   customerId: X5678
                   productQuantity:
-                  - productName: Eclair Chocolat
+                    productName: Eclair Chocolat
                     quantity: 1
                   totalPrice: 5
       responses:
@@ -82,9 +82,8 @@ components:
           type: string
         productQuantity:
           description: Desired products and quantities for this order
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductQuantity'
+          type: object
+          $ref: '#/components/schemas/ProductQuantity'
         totalPrice:
           format: double
           description: Total price of the order
